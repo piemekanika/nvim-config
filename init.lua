@@ -58,16 +58,14 @@ vim.keymap.set("n", "<leader>ft", builtin.treesitter, { desc = "Telescope treesi
 vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "Telescope diagnostics" })
 vim.keymap.set("n", "<leader>fe", builtin.current_buffer_fuzzy_find, { desc = "Telescope current buffer fuzzy finder" })
 
-vim.keymap.set("n", "<leader>gb", function()
-	require("gitsigns").blame_line()
-end, { desc = "Git blame current line" })
-
-vim.keymap.set("n", "<leader>ga", require("gitsigns").blame, { desc = "Git blame" })
-
 vim.api.nvim_set_keymap("n", "<leader>w", ":bd<CR>", { noremap = true, silent = true })
 
-vim.keymap.set("n", "<A-d>", '<CMD>lua require("FTerm").toggle()<CR>')
+vim.keymap.set("n", "<A-d>", ':lua require("FTerm").toggle()<CR>')
 vim.keymap.set("t", "<A-d>", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+
+vim.keymap.set({ "v", "x" }, "<leader>gh", "<CMD>'<,'>DiffviewFileHistory<CR>", { noremap = true, silent = true })
+vim.keymap.set({ "n" }, "<leader>gf", "<CMD>DiffviewFileHistor %<CR>", { noremap = true, silent = true })
+vim.keymap.set({ "n" }, "<leader>gw", "<CMD>DiffviewClose<CR>", { noremap = true, silent = true })
 
 -- Make help pages appear on the right split
 vim.api.nvim_create_autocmd("FileType", {
@@ -89,4 +87,3 @@ vim.o.foldcolumn = "0" -- '0' is not bad
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
-
