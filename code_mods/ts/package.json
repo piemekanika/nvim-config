@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "jscodeshift": "^17.3.0",
+    "typescript": "^5.8.3",
+    "url": "^0.11.4"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/jscodeshift": "^17.3.0"
+  }
+}
