@@ -65,7 +65,10 @@ vim.keymap.set("t", "<A-d>", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>'
 
 vim.keymap.set({ "v", "x" }, "<leader>gh", ":DiffviewFileHistory<CR>", { noremap = true, silent = true })
 vim.keymap.set({ "n" }, "<leader>gf", "<CMD>DiffviewFileHistor %<CR>", { noremap = true, silent = true })
-vim.keymap.set({ "n" }, "<leader>gw", "<CMD>DiffviewClose<CR>", { noremap = true, silent = true })
+
+vim.keymap.set("n", "<leader>gb", function()
+	require("gitsigns").blame_line()
+end, { desc = "Git blame current line" })
 
 -- Make help pages appear on the right split
 vim.api.nvim_create_autocmd("FileType", {
