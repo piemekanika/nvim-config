@@ -63,7 +63,7 @@ vim.api.nvim_set_keymap("n", "<leader>w", ":bd<CR>", { noremap = true, silent = 
 vim.keymap.set("n", "<A-d>", ':lua require("FTerm").toggle()<CR>')
 vim.keymap.set("t", "<A-d>", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
 
-vim.keymap.set({ "v", "x" }, "<leader>gh", "<CMD>'<,'>DiffviewFileHistory<CR>", { noremap = true, silent = true })
+vim.keymap.set({ "v", "x" }, "<leader>gh", ":DiffviewFileHistory<CR>", { noremap = true, silent = true })
 vim.keymap.set({ "n" }, "<leader>gf", "<CMD>DiffviewFileHistor %<CR>", { noremap = true, silent = true })
 vim.keymap.set({ "n" }, "<leader>gw", "<CMD>DiffviewClose<CR>", { noremap = true, silent = true })
 
