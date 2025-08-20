@@ -4,7 +4,17 @@ return {
 	config = function()
 		require("nvim-treesitter.configs").setup({
 			-- Ensure the parsers for Lua, Go, JavaScript, and TypeScript are installed
-			ensure_installed = { "lua", "go", "javascript", "typescript" },
+			ensure_installed = {
+                "lua",
+                "go",
+                "gowork",
+                "gomod",
+                "gosum",
+                "gotmpl",
+                "comment",
+                "javascript",
+                "typescript",
+            },
 
 			-- Automatically install parsers when entering a buffer (optional)
 			auto_install = true,
