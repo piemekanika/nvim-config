@@ -18,7 +18,6 @@ return {
 			bothub = {
 				__inherited_from = "openai",
 				endpoint = "https://bothub.chat/api/v2/openai/v1",
-				-- model = "gemini-2.5-flash-lite-preview-06-17",
 				model = "qwen3-coder",
 				api_key_name = "BOTHUB_API_KEY",
 				timeout = 20000,
@@ -26,6 +25,26 @@ return {
 					temperature = 1,
 				},
 			},
+			-- bothub_gemini = {
+			-- 	__inherited_from = "openai",
+			-- 	endpoint = "https://bothub.chat/api/v2/openai/v1",
+			-- 	model = "gemini-2.5-flash-lite-preview-06-17",
+			-- 	api_key_name = "BOTHUB_API_KEY",
+			-- 	timeout = 20000,
+			-- 	extra_request_body = {
+			-- 		temperature = 1,
+			-- 	},
+			-- },
+			-- bothub_deepseek = {
+			-- 	__inherited_from = "openai",
+			-- 	endpoint = "https://bothub.chat/api/v2/openai/v1",
+			-- 	model = "deepseek-r1-0528",
+			-- 	api_key_name = "BOTHUB_API_KEY",
+			-- 	timeout = 20000,
+			-- 	extra_request_body = {
+			-- 		temperature = 1,
+			-- 	},
+			-- },
 		},
 		windows = {
 			width = 40,
