@@ -20,6 +20,8 @@ vim.opt.shiftwidth = 4
 -- Set the number of spaces inserted when you press Tab in insert mode
 vim.opt.softtabstop = 4
 
+vim.opt.scrolloff = 8 -- Keep 8 lines above and below the cursor
+
 -- Set indentation to 4 spaces
 vim.opt.tabstop = 4 -- Width of tab character
 vim.opt.softtabstop = 4 -- Fine tunes the amount of whitespace to be added
