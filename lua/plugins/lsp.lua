@@ -6,13 +6,13 @@ local lsp_servers = {
     'gopls',
     'yamlls',
     'bashls',
-    -- 'docker_language_server',
+    'docker_language_server',
     'nginx_language_server',
     'graphql',
-    -- 'protols',
+    'protols',
     'cssls',
     -- 'gitlab_ci_ls',
-    -- 'gh_actions_ls',
+    'gh_actions_ls',
 }
 
 return {
