@@ -1,23 +1,41 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	build = ":TSUpdate", -- Automatically update parsers when installing/updating
+	build = ":TSUpdate",
 	config = function()
 		require("nvim-treesitter.configs").setup({
-			-- Ensure the parsers for Lua, Go, JavaScript, and TypeScript are installed
 			ensure_installed = {
-                "lua",
-                "go",
-                "gowork",
-                "gomod",
-                "gosum",
-                "gotmpl",
-                "comment",
-                "javascript",
-                "typescript",
-            },
+				"lua",
+				"go",
+				"gowork",
+				"gomod",
+				"gosum",
+				"gotmpl",
+				"comment",
+				"javascript",
+				"typescript",
+				"yaml",
+				"svelte",
+				"proto",
+				"graphql",
+				"nginx",
+				"dockerfile",
+				"bash",
+				"gitignore",
+				"html",
+				"css",
+				"scss",
+			},
+
+			modules = {},
 
 			-- Automatically install parsers when entering a buffer (optional)
 			auto_install = true,
+
+			-- List of parsers to ignore installing (or "all")
+			ignore_install = {},
+
+			-- Install parsers synchronously (only applied to `ensure_installed`)
+			sync_install = false,
 
 			-- Enable syntax highlighting
 			highlight = {
