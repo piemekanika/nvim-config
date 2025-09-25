@@ -41,8 +41,8 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			{ "mason-org/mason.nvim", version = "1.11.0" },
-			{ "mason-org/mason-lspconfig.nvim", version = "1.32.0" },
+			{ "mason-org/mason.nvim" },
+			{ "mason-org/mason-lspconfig.nvim" },
 		},
 		config = function()
 			vim.lsp.config("lua_ls", {
