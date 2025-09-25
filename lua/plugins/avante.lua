@@ -47,10 +47,11 @@ return {
 			-- },
 		},
 		windows = {
-			width = 40,
+			width = 45,
 		},
 	},
 	dependencies = {
+        "ravitemer/mcphub.nvim",
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 		--- The below dependencies are optional,
