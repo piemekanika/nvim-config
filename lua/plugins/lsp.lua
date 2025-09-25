@@ -1,18 +1,18 @@
 local lsp_servers = {
-    'vtsls',
-    'lua_ls',
-    'tailwindcss',
-    'svelte',
-    'gopls',
-    'yamlls',
-    'bashls',
-    'docker_language_server',
-    'nginx_language_server',
-    'graphql',
-    -- 'protols',
-    'cssls',
-    -- 'gitlab_ci_ls',
-    'gh_actions_ls',
+	"vtsls",
+	"lua_ls",
+	"tailwindcss",
+	"svelte",
+	"gopls",
+	"yamlls",
+	"bashls",
+	"docker_language_server",
+	"nginx_language_server",
+	"graphql",
+	-- "protols",
+	"cssls",
+	-- 'gitlab_ci_ls',
+	"gh_actions_ls",
 }
 
 return {
@@ -28,11 +28,11 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = {
-            "williamboman/mason.nvim",
-        },
+			"williamboman/mason.nvim",
+		},
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = lsp_servers
+				ensure_installed = lsp_servers,
 			})
 		end,
 	},
@@ -65,6 +65,7 @@ return {
 					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 					vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+					vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 				end,
 			})
 		end,
