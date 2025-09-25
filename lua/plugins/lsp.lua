@@ -9,7 +9,7 @@ local lsp_servers = {
     'docker_language_server',
     'nginx_language_server',
     'graphql',
-    'protols',
+    -- 'protols',
     'cssls',
     -- 'gitlab_ci_ls',
     'gh_actions_ls',
