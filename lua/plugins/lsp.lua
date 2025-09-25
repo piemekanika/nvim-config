@@ -72,38 +72,3 @@ return {
 	},
 }
 
--- old lsp config
--- -- Basic LSP setup example for Lua
--- local lspconfig = vim.lsp.config
--- lspconfig.lua_ls.setup({
--- 	settings = {
--- 		Lua = {
--- 			diagnostics = {
--- 				globals = { "vim" }, -- Recognize Vim globals
--- 			},
--- 		},
--- 	},
--- })
-
--- lspconfig.ts_ls.setup({
--- 	on_attach = function(client, bufnr)
--- 		local opts = { buffer = bufnr, remap = false }
--- 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
--- 		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
--- 		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
--- 		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
--- 	end,
--- 	filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
--- })
-
--- lspconfig.vtsls.setup({
--- 	on_attach = function(client, bufnr)
--- 		local opts = { buffer = bufnr, remap = false }
--- 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
--- 		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
--- 		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
--- 		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
--- 	end,
--- 	filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
--- })
---
