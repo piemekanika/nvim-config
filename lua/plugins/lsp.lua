@@ -1,8 +1,24 @@
+local lsp_servers = {
+    'vtsls',
+    'lua_ls',
+    'tailwindcss',
+    'svelte',
+    'gopls',
+    'yamlls',
+    'bashls',
+    -- 'docker_language_server',
+    'nginx_language_server',
+    'graphql',
+    -- 'protols',
+    'cssls',
+    -- 'gitlab_ci_ls',
+    -- 'gh_actions_ls',
+}
+
 return {
 	-- Mason for managing LSP servers
 	{
 		"williamboman/mason.nvim",
-		version = "1.11.0",
 		config = function()
 			require("mason").setup()
 		end,
@@ -11,12 +27,12 @@ return {
 	-- Mason-LSPconfig bridge
 	{
 		"williamboman/mason-lspconfig.nvim",
-		version = "1.32.0",
-		dependencies = { "williamboman/mason.nvim" },
+		dependencies = {
+            "williamboman/mason.nvim",
+        },
 		config = function()
 			require("mason-lspconfig").setup({
-				-- TODO move it to local var
-				ensure_installed = { "vtsls", "lua_ls" }, -- Add any LSP servers you want auto-installed
+				ensure_installed = lsp_servers
 			})
 		end,
 	},
@@ -39,7 +55,7 @@ return {
 				},
 			})
 
-			vim.lsp.enable({ "vtsls", "lua_ls" })
+			vim.lsp.enable(lsp_servers)
 
 			-- Optional: Keymaps for LSP
 			vim.api.nvim_create_autocmd("LspAttach", {
