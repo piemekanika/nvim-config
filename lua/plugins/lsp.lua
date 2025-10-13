@@ -57,7 +57,6 @@ return {
 
 			vim.lsp.enable(lsp_servers)
 
-			-- Optional: Keymaps for LSP
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 				callback = function(ev)
