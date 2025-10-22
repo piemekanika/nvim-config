@@ -83,7 +83,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.keymap.set("n", "<leader>ga", function()
-	require("tiny-code-action").code_action()
+	require("tiny-code-action").code_action({})
 end, { noremap = true, silent = true })
 
 require("snippets.test")
