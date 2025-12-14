@@ -50,8 +50,9 @@ vim.keymap.set("n", "<leader>q", ":botright copen<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>Q", ":cclose<CR>", { noremap = true })
 
 local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>fw", function() require("snacks").picker.grep() end, { desc = "Snacks live grep" })
+local snacks_picker = require("snacks").picker
+vim.keymap.set("n", "<leader>ff", snacks_picker.files, { desc = "Snacks find files" })
+vim.keymap.set("n", "<leader>fw", snacks_picker.grep, { desc = "Snacks live grep" })
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fr", builtin.resume, { desc = "Telescope resume" })
 vim.keymap.set("n", "<leader>fl", builtin.lsp_references, { desc = "Telescope LSP references" })
@@ -68,7 +69,7 @@ vim.keymap.set("t", "<A-d>", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>'
 vim.keymap.set({ "v", "x" }, "<leader>gh", ":DiffviewFileHistory<CR>", { noremap = true, silent = true })
 vim.keymap.set({ "n" }, "<leader>gf", "<CMD>DiffviewFileHistor %<CR>", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR><Esc>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Esc>", ":noh<CR><Esc>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>gb", function()
 	require("gitsigns").blame_line()
