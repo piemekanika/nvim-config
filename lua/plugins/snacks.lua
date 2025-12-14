@@ -2,6 +2,7 @@ return {
 	"folke/snacks.nvim",
 	priority = 1000,
 	lazy = false,
+	---@type snacks.Config
 	opts = {
 		-- Enable the notifier
 		notifier = { enabled = true },
@@ -12,4 +13,3 @@ return {
 		-- Add any custom keybindings here if needed
 	},
 }
-
