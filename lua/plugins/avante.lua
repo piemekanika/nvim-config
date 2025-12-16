@@ -51,7 +51,7 @@ return {
 		},
 	},
 	dependencies = {
-        "ravitemer/mcphub.nvim",
+		-- "ravitemer/mcphub.nvim",
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 		--- The below dependencies are optional,
