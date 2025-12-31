@@ -17,9 +17,9 @@ return {
 		providers = {
 			bothub = {
 				__inherited_from = "openai",
-				endpoint = "https://bothub.chat/api/v2/openai/v1",
-				model = "qwen3-coder",
-				api_key_name = "BOTHUB_API_KEY",
+				endpoint = "https://api.polza.ai/api/v1",
+				model = "minimax/minimax-m2.1",
+				api_key_name = "POLZA_API_KEY",
 				timeout = 20000,
 				extra_request_body = {
 					temperature = 1,
