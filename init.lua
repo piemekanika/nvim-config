@@ -49,17 +49,15 @@ vim.keymap.set("n", "<leader>q", ":botright copen<CR>", { noremap = true })
 -- Close Quickfix
 vim.keymap.set("n", "<leader>Q", ":cclose<CR>", { noremap = true })
 
-local builtin = require("telescope.builtin")
 local snacks_picker = require("snacks").picker
 vim.keymap.set("n", "<leader>ff", snacks_picker.files, { desc = "Snacks find files" })
 vim.keymap.set("n", "<leader>fw", snacks_picker.grep, { desc = "Snacks live grep" })
-vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+vim.keymap.set("n", "<leader>fb", snacks_picker.buffers, { desc = "Snacks buffers" })
 vim.keymap.set("n", "<leader>fr", snacks_picker.resume, { desc = "Snacks resume" })
-vim.keymap.set("n", "<leader>fl", builtin.lsp_references, { desc = "Telescope LSP references" })
-vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Telescope LSP symbols" })
-vim.keymap.set("n", "<leader>ft", builtin.treesitter, { desc = "Telescope treesitter" })
-vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "Telescope diagnostics" })
-vim.keymap.set("n", "<leader>fe", builtin.current_buffer_fuzzy_find, { desc = "Telescope current buffer fuzzy finder" })
+vim.keymap.set("n", "<leader>fl", snacks_picker.lsp_references, { desc = "Snacks LSP references" })
+vim.keymap.set("n", "<leader>fs", snacks_picker.lsp_symbols, { desc = "Snacks LSP symbols" })
+vim.keymap.set("n", "<leader>ft", snacks_picker.treesitter, { desc = "Snacks treesitter" })
+vim.keymap.set("n", "<leader>fd", snacks_picker.diagnostics, { desc = "Snacks diagnostics" })
 
 vim.api.nvim_set_keymap("n", "<leader>w", ":bd<CR>", { noremap = true, silent = true })
 
