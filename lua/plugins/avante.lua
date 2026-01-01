@@ -13,12 +13,12 @@ return {
 		-- this file can contain specific instructions for your project
 		-- instructions_file = "avante.md",
 		-- -- for example
-		provider = "bothub",
+		provider = "polza",
 		providers = {
-			bothub = {
+			polza = {
 				__inherited_from = "openai",
 				endpoint = "https://api.polza.ai/api/v1",
-				model = "minimax/minimax-m2.1",
+				model = "z-ai/glm-4.7",
 				api_key_name = "POLZA_API_KEY",
 				timeout = 20000,
 				extra_request_body = {
