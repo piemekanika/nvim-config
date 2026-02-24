@@ -1,5 +1,6 @@
 local lsp_servers = {
-	"vtsls",
+	-- "vtsls",
+    "tsgo",
 	"lua_ls",
 	"tailwindcss",
 	"svelte",

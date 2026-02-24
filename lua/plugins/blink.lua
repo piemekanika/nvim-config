@@ -1,7 +1,11 @@
 return {
 	"saghen/blink.cmp",
 	-- optional: provides snippets for the snippet source
-	dependencies = { "L3MON4D3/LuaSnip", version = "v2.*" },
+	dependencies = {
+		"L3MON4D3/LuaSnip",
+		version = "v2.*",
+		build = "make install_jsregexp",
+	},
 
 	-- use a release tag to download pre-built binaries
 	version = "1.*",
@@ -52,12 +56,12 @@ return {
 		-- elsewhere in your config, without redefining it, due to `opts_extend`
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
-            providers = {
-                buffer = {
-                    min_keyword_length = 2,
-                    max_items = 5,
-                }
-            }
+			providers = {
+				buffer = {
+					min_keyword_length = 2,
+					max_items = 5,
+				},
+			},
 		},
 
 		-- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
@@ -69,4 +73,3 @@ return {
 	},
 	opts_extend = { "sources.default" },
 }
-
