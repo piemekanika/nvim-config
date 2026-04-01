@@ -9,42 +9,18 @@ return {
 	---@module 'avante'
 	---@type avante.Config
 	opts = {
-		-- add any opts here
-		-- this file can contain specific instructions for your project
-		-- instructions_file = "avante.md",
-		-- -- for example
 		provider = "polza",
 		providers = {
 			polza = {
 				__inherited_from = "openai",
 				endpoint = "https://api.polza.ai/api/v1",
-				model = "z-ai/glm-4.7",
+				model = "xiaomi/mimo-v2-pro",
 				api_key_name = "POLZA_API_KEY",
 				timeout = 20000,
 				extra_request_body = {
-					temperature = 1,
+					temperature = 0.3,
 				},
 			},
-			-- bothub_gemini = {
-			-- 	__inherited_from = "openai",
-			-- 	endpoint = "https://bothub.chat/api/v2/openai/v1",
-			-- 	model = "gemini-2.5-flash-lite-preview-06-17",
-			-- 	api_key_name = "BOTHUB_API_KEY",
-			-- 	timeout = 20000,
-			-- 	extra_request_body = {
-			-- 		temperature = 1,
-			-- 	},
-			-- },
-			-- bothub_deepseek = {
-			-- 	__inherited_from = "openai",
-			-- 	endpoint = "https://bothub.chat/api/v2/openai/v1",
-			-- 	model = "deepseek-r1-0528",
-			-- 	api_key_name = "BOTHUB_API_KEY",
-			-- 	timeout = 20000,
-			-- 	extra_request_body = {
-			-- 		temperature = 1,
-			-- 	},
-			-- },
 		},
 		windows = {
 			width = 45,
@@ -62,24 +38,6 @@ return {
 		"stevearc/dressing.nvim", -- for input provider dressing
 		"folke/snacks.nvim", -- for input provider snacks
 		"nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-		-- "zbirenbaum/copilot.lua", -- for providers='copilot'
-		-- {
-		-- 	-- support for image pasting
-		-- 	"HakonHarnes/img-clip.nvim",
-		-- 	event = "VeryLazy",
-		-- 	opts = {
-		-- 		-- recommended settings
-		-- 		default = {
-		-- 			embed_image_as_base64 = false,
-		-- 			prompt_for_file_name = false,
-		-- 			drag_and_drop = {
-		-- 				insert_mode = true,
-		-- 			},
-		-- 			-- required for Windows users
-		-- 			use_absolute_path = true,
-		-- 		},
-		-- 	},
-		-- },
 		-- {
 		-- 	-- Make sure to set this up properly if you have lazy=true
 		-- 	"MeanderingProgrammer/render-markdown.nvim",
