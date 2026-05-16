@@ -33,10 +33,6 @@ vim.opt.smartindent = true -- Insert indents automatically
 vim.opt.autoindent = true -- Copy indent from current line when starting a new line
 vim.opt.breakindent = true -- Wrapped lines preserve indentation
 
-vim.keymap.set("n", "-", function()
-	require("oil").open_float()
-end, { desc = "Open Oil file explorer in float window" })
-
 require("config.lazy")
 
 vim.diagnostic.config({
@@ -93,3 +89,8 @@ vim.o.foldcolumn = "0" -- '0' is not bad
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
+
+vim.keymap.set("n", "-", function()
+	require("oil").open_float()
+end, { desc = "Open Oil file explorer in float window" })
+
