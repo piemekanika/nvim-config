@@ -6,16 +6,14 @@ return {
 	config = function()
 		local treesitter = require("nvim-treesitter")
 
-		treesitter.setup()
-
 		-- Ensure Installed
 		treesitter.install({
 			"lua",
-			-- "go",
-			-- "gowork",
-			-- "gomod",
-			-- "gosum",
-			-- "gotmpl",
+			"go",
+			"gowork",
+			"gomod",
+			"gosum",
+			"gotmpl",
 			"comment",
 			"markdown",
 			"markdown_inline",
@@ -32,6 +30,8 @@ return {
 			"html",
 			"css",
 			"scss",
+			"caddy",
+			"templ",
 		})
 
 		-- Highlighting
@@ -44,6 +44,13 @@ return {
 
 		-- Indentation
 		vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = "templ",
+			callback = function()
+				vim.treesitter.start()
+			end,
+		})
 	end,
 }
 
