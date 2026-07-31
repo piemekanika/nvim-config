@@ -106,3 +106,5 @@ end, { desc = "Open Oil file explorer in float window" })
 -- 		enable = true,
 -- 	},
 -- })
+
+vim.lsp.inlay_hint.enable(false)

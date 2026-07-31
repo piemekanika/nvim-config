@@ -69,8 +69,6 @@ return {
 					vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 					vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-
-                    vim.lsp.inlay_hint.enable(false)
 				end,
 			})
 		end,
