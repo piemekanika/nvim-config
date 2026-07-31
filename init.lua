@@ -100,11 +100,4 @@ vim.keymap.set("n", "-", function()
 	require("oil").open_float()
 end, { desc = "Open Oil file explorer in float window" })
 
--- require("nvim-treesitter.configs").setup({
--- 	ensure_installed = { "go", "html", "templ" }, -- templ relies on go and html
--- 	highlight = {
--- 		enable = true,
--- 	},
--- })
-
 vim.lsp.inlay_hint.enable(false)
