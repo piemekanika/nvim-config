@@ -1,5 +1,4 @@
 local lsp_servers = {
-	-- "vtsls",
 	"tsgo",
 	"lua_ls",
 	"tailwindcss",
@@ -10,9 +9,7 @@ local lsp_servers = {
 	"docker_language_server",
 	"nginx_language_server",
 	"graphql",
-	-- "protols",
 	"cssls",
-	-- 'gitlab_ci_ls',
 	"gh_actions_ls",
 }
 
@@ -28,6 +25,7 @@ return {
 	-- Mason-LSPconfig bridge
 	{
 		"williamboman/mason-lspconfig.nvim",
+		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			"williamboman/mason.nvim",
 		},
@@ -45,6 +43,7 @@ return {
 			{ "mason-org/mason.nvim" },
 			{ "mason-org/mason-lspconfig.nvim" },
 		},
+		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			vim.lsp.config("lua_ls", {
 				settings = {
@@ -69,6 +68,8 @@ return {
 					vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 					vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+
+					vim.lsp.inlay_hint.enable(false)
 				end,
 			})
 		end,

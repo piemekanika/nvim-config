@@ -1,6 +1,6 @@
-local ls = require("luasnip")
-local s = ls.snippet
-local t = ls.text_node
+-- local ls = require("luasnip")
+-- local s = ls.snippet
+-- local t = ls.text_node
 -- local i = ls.insert_node
 --
 -- ls.add_snippets("lua", {
@@ -20,13 +20,13 @@ local t = ls.text_node
 --
 -- return 
 -- return rr 
-
-ls.add_snippets("all", {
-    s("rr", {
-        t("return "),
-    }),
-})
-
+--
+-- ls.add_snippets("all", {
+--     s("rr", {
+--         t("return "),
+--     }),
+-- })
+--
 -- return {
 -- 	ls.snippet({ trig = "rr", dscr = "Pastes `return` keyword" }, {
 -- 		t("return"),

@@ -1,5 +1,14 @@
 return {
 	"sindrets/diffview.nvim",
+
+	cmd = {
+		"DiffviewOpen",
+		"DiffviewClose",
+		"DiffviewFileHistory",
+		"DiffviewToggleFiles",
+		"DiffviewFocusFiles",
+	},
+
 	config = function()
 		require("diffview").setup({
 			keymaps = {
