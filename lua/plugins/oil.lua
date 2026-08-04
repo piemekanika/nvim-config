@@ -8,9 +8,9 @@ return {
 			show_hidden = true,
 		},
 
-        keymaps = {
-            ["q"] = { "actions.close", mode = "n" },
-        },
+		keymaps = {
+			["q"] = { "actions.close", mode = "n" },
+		},
 
 		-- Configuration for the floating window in oil.open_float
 		---@type oil.fooBar

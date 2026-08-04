@@ -1,5 +1,7 @@
 return {
 	"windwp/nvim-ts-autotag",
+	event = "BufEnter",
+	lazy = true,
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
 	},
@@ -12,13 +14,13 @@ return {
 				enable_close_on_slash = false, -- Auto close on </
 			},
 			filetypes = {
-                "html",
-                "xml",
-                "jsx",
-                "tsx",
-                "vue",
-                "svelte",
-            },
+				"html",
+				"xml",
+				"jsx",
+				"tsx",
+				"vue",
+				"svelte",
+			},
 		})
 	end,
 }

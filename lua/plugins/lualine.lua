@@ -28,6 +28,8 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 
+	event = "VeryLazy",
+
 	init = function()
 		require("lualine").setup({
 			sections = {
@@ -42,7 +44,7 @@ return {
 				theme = "dracula",
 				section_separators = { left = "", right = "" },
 				component_separators = { left = "", right = "" },
-                -- globalstatus = true,
+				-- globalstatus = true,
 			},
 		})
 	end,
