@@ -3,6 +3,7 @@ return {
 	version = "*",
 	dependencies = "nvim-tree/nvim-web-devicons",
 	event = "BufEnter",
+	after = "catppuccin",
 
 	opts = {
 		options = {
@@ -27,10 +28,11 @@ return {
 					style = "none",
 				},
 				close_icon = " ",
-                buffer_close_icon = " ",
+				buffer_close_icon = " ",
 				modified_icon = " ",
 				max_name_length = 25,
 			},
+			highlights = require("catppuccin.special.bufferline").get_theme(),
 		})
 	end,
 }
