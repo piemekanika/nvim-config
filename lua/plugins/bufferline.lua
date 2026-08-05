@@ -1,9 +1,14 @@
 return {
 	"akinsho/bufferline.nvim",
 	version = "*",
-	dependencies = "nvim-tree/nvim-web-devicons",
-	event = "BufEnter",
-	after = "catppuccin",
+	-- dependencies = "nvim-tree/nvim-web-devicons",
+	-- event = "BufEnter",
+	-- after = "catppuccin",
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+      "catppuccin/nvim",
+    },
 
 	opts = {
 		options = {
@@ -32,7 +37,7 @@ return {
 				modified_icon = " ",
 				max_name_length = 25,
 			},
-			highlights = require("catppuccin.special.bufferline").get_theme(),
+			-- highlights = require("catppuccin.special.bufferline").get_theme({}),
 		})
 	end,
 }

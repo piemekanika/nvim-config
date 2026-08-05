@@ -8,11 +8,12 @@ return {
 
 		opts = {
 			compile = true,
-			flavour = "catppuccin-macchiato",
+			flavour = "macchiato",
 		},
 
 		config = function(_, opts)
 			require("catppuccin").setup(opts)
+
 			vim.cmd.colorscheme("catppuccin")
 		end,
 	},
