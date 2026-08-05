@@ -10,6 +10,7 @@ return {
 	-- 	-- you can use `gb` in `:Lazy` to rebuild the plugin as needed
 	-- 	require("blink.cmp").build():wait(60000)
 	-- end,
+    event = { "InsertEnter", "CmdlineEnter" },
 
 	---@module 'blink.cmp'
 	---@type blink.cmp.Config
