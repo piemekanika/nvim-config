@@ -16,6 +16,8 @@ vim.api.nvim_set_hl(0, "CursorLineNr", { bold = true, fg = "#ffaf00" })
 -- Set clipboard to use system clipboard
 vim.opt.clipboard = "unnamedplus"
 
+vim.opt.signcolumn = "yes"
+
 -- Set indents
 -- Use tabs for indentation
 vim.opt.expandtab = false
