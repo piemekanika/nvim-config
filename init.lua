@@ -94,7 +94,7 @@ vim.keymap.set("n", "<leader>ga", function()
 end, { noremap = true, silent = true })
 
 -- require("snippets.test")
-require("custom.ar")
+-- require("custom.ar")
 -- require("snippets.tsx")
 
 vim.o.foldcolumn = "0" -- '0' is not bad
