@@ -16,7 +16,11 @@ vim.api.nvim_set_hl(0, "CursorLineNr", { bold = true, fg = "#ffaf00" })
 -- Set clipboard to use system clipboard
 vim.opt.clipboard = "unnamedplus"
 
+-- always add a signcolumn on the left to prevent layout shift of git signs
 vim.opt.signcolumn = "yes"
+
+-- reloads file when the file is changed outside of neovim
+vim.o.autoread = true
 
 -- Set indents
 -- Use tabs for indentation
