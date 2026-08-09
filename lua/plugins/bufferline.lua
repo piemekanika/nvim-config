@@ -37,7 +37,6 @@ return {
 				modified_icon = " ",
 				max_name_length = 25,
 			},
-			-- highlights = require("catppuccin.special.bufferline").get_theme({}),
 		})
 	end,
 }
