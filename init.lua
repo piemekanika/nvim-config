@@ -126,3 +126,9 @@ end, { desc = "Copy entire file content" })
 
 -- Select the entire file's content
 vim.keymap.set("n", "<leader>va", "ggVG", { desc = "Select entire file content" })
+
+-- Yank to 'block hole register' when c key is used
+-- so clipboard won't be polluted
+vim.keymap.set("n", "c", '"_c', { remap = false })
+vim.keymap.set("x", "c", '"_c', { remap = false })
+
