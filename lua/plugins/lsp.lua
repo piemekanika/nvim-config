@@ -1,5 +1,5 @@
 local lsp_servers = {
-	"tsgo",
+	"tsc",
 	"lua_ls",
 	"tailwindcss",
 	"svelte",
