@@ -3,9 +3,9 @@ vim.keymap.set("n", ";", ":", { noremap = true })
 vim.loader.enable()
 
 vim.filetype.add({
-	extension = {
-		templ = "templ",
-	},
+    extension = {
+        templ = "templ",
+    },
 })
 
 vim.opt.number = true -- Enable line numbers
@@ -132,3 +132,14 @@ vim.keymap.set("n", "<leader>va", "ggVG", { desc = "Select entire file content" 
 vim.keymap.set("n", "c", '"_c', { remap = false })
 vim.keymap.set("x", "c", '"_c', { remap = false })
 
+-- Normal mode: move the current line
+vim.keymap.set("n", "<leader>j", ":move .+1<CR>==", { silent = true })
+vim.keymap.set("n", "<leader>k", ":move .-2<CR>==", { silent = true })
+vim.keymap.set("n", "<M-j>", ":move .+1<CR>==", { silent = true })
+vim.keymap.set("n", "<M-k>", ":move .-2<CR>==", { silent = true })
+
+-- Visual mode: move selected lines
+vim.keymap.set("x", "<leader>j", ":move '>+1<CR>gv=gv", { silent = true })
+vim.keymap.set("x", "<leader>k", ":move '<-2<CR>gv=gv", { silent = true })
+vim.keymap.set("x", "<M-j>", ":move '>+1<CR>gv=gv", { silent = true })
+vim.keymap.set("x", "<M-k>", ":move '<-2<CR>gv=gv", { silent = true })
