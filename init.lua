@@ -143,3 +143,17 @@ vim.keymap.set("x", "<leader>j", ":move '>+1<CR>gv=gv", { silent = true })
 vim.keymap.set("x", "<leader>k", ":move '<-2<CR>gv=gv", { silent = true })
 vim.keymap.set("x", "<M-j>", ":move '>+1<CR>gv=gv", { silent = true })
 vim.keymap.set("x", "<M-k>", ":move '<-2<CR>gv=gv", { silent = true })
+
+local opts = { noremap = true, silent = true }
+
+-- Normal mode: move the current line
+vim.keymap.set("n", "<leader>h", "<<", opts)
+vim.keymap.set("n", "<leader>l", ">>", opts)
+vim.keymap.set("n", "<M-h>", "<<", opts) -- Alt-h
+vim.keymap.set("n", "<M-l>", ">>", opts) -- Alt-l
+
+-- Visual mode: move selected lines and keep them selected
+vim.keymap.set("x", "<leader>h", "<gv", opts)
+vim.keymap.set("x", "<leader>l", ">gv", opts)
+vim.keymap.set("x", "<M-h>", "<gv", opts) -- Alt-h
+vim.keymap.set("x", "<M-l>", ">gv", opts) -- Alt-l
