@@ -1,5 +1,7 @@
 vim.keymap.set("n", ";", ":", { noremap = true })
 
+vim.loader.enable()
+
 vim.filetype.add({
 	extension = {
 		templ = "templ",
@@ -107,3 +109,20 @@ vim.keymap.set("n", "-", function()
 end, { desc = "Open Oil file explorer in float window" })
 
 vim.lsp.inlay_hint.enable(false)
+
+-- Copy the current file path relative to the project root (cwd)
+vim.keymap.set("n", "<leader>yf", function()
+	local path = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":.")
+	vim.fn.setreg("+", path)
+	vim.notify("Copied: " .. path)
+end, { desc = "Copy file path from project root" })
+
+-- Copy the entire file's content
+vim.keymap.set("n", "<leader>ya", function()
+	local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+	vim.fn.setreg("+", table.concat(lines, "\n") .. "\n")
+	vim.notify("Copied file content")
+end, { desc = "Copy entire file content" })
+
+-- Select the entire file's content
+vim.keymap.set("n", "<leader>va", "ggVG", { desc = "Select entire file content" })
