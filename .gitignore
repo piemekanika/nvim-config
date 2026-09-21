@@ -1,3 +1,3 @@
 node_modules/
-.aider*
+lua/plugins/local*
 lazy-lock.json
